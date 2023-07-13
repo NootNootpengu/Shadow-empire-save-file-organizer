@@ -5,7 +5,12 @@ import string
 import time
 
 def set_folder(save_folder):
-    os.chdir(save_folder)
+    try:
+        os.chdir(save_folder)
+    except:
+        print(fore.RED + "\n[-] Failed to set folder, please send error to https://github.com/NootNootpengu/Shadow-empire-save-file-organizer\n")
+        raise
+    
     
 
 def start_up():
