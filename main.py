@@ -39,7 +39,6 @@ def main():
             game_num = ''.join(e for e in game_num if e.isalnum())
             remove_letters = str.maketrans('', '', string.ascii_letters)
             res = game_num.translate(remove_letters)
-            print(res)
             try:
                 dir_name = f'PBEM{res}'
                 os.mkdir(dir_name)
@@ -47,9 +46,11 @@ def main():
                 print(exist)
                 pass
             shutil.copy(file, dir_name)
+            os.remove(file)
             print(fore.LIGHTBLUE_EX + f'[+] Successfully copied {file} to {dir_name}')
         else:
             print(fore.RED + f"[-] {file} is not a PBEM shadow empire file.")
+        
 
 
 
@@ -59,7 +60,9 @@ if __name__ == "__main__":
     set_folder(save_folder=input("Please enter your folders path containing saves: "))
     start_up()
     main()
-    input()
+    print('')
+    print(fore.YELLOW + "Thank you for using our program, please leave a review at our github page:\nhttps://github.com/NootNootpengu/Shadow-empire-save-file-organizer\n")
+    input("press enter to exit...\n")
 
 
 
