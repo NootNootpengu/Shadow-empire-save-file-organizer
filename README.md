@@ -1,4 +1,4 @@
-# Shadow Empire save file organizer
+# Shadow Empire save PBEM file organizer
 shadow empire is a 4x game, and this is an organizer to fix the problem of downloading Multiplayer PBEM saved files and having them all over the place.
 
 # how to use
